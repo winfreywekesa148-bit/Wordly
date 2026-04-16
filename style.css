@@ -86,3 +86,16 @@ button{
 button:hover{
     background: var(--primary-dark);
 }
+
+#toast{
+    color: var(--primary-dark);
+    visibility: hidden;
+    text-align: center;
+    position: sticky;
+    opacity: 0;
+}
+#toast.show{
+    visibility: visible;
+    opacity: 1;
+    bottom: 50%;
+}
