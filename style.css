@@ -72,3 +72,17 @@ input{
     row-gap: 70px;
 
 }
+
+button{
+    padding: 3px;
+    border: solid 2px var(--border);
+    border-radius: 10px;
+    width: 20%;
+    font-size: 16px;
+    background: var(--primary-lighter);
+    cursor: pointer;
+}
+
+button:hover{
+    background: var(--primary-dark);
+}
