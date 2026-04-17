@@ -18,11 +18,20 @@ function searchWord(e) {
     }
     fetchWord(word);
 }
+
+function fetchWord(word) {
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
+        .then(response => {
+            if (!response.ok) throw new Error('Word not found');
+            return response.json();
+        })
+        .then(data => displayResult(data[0]))
+        .catch(err => error(err.message));
+}
 // display results
 function displayResult(data) {
     result.innerHTML = '';
     result.textContent = data.word;
-    let html = '';
 
     const audio = data.phonetics.find(p => p.audio);
     if (audioData) {
