@@ -59,9 +59,7 @@ const allSynonyms = data.meanings.flatMap(m => m.synonyms);
     } else {
         synonyms.innerHTML += `<p><strong>Synonyms:</strong> None</p>`;
     }
-});
-
-}
+};
 
 const searchButton = document.getElementById('button');
 searchButton.addEventListener('click', searchWord);
