@@ -99,3 +99,24 @@ button:hover{
     opacity: 1;
     bottom: 50%;
 }
+
+#results{
+    background: var(--primary-light);
+    border: solid 2px var(--border);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#description {
+    background: var(--primary-light);
+    border: solid 2px var(--border);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#synonyms{
+    display: inline-block;
+    margin: 3px;
+    padding: auto;
+    border-radius: 5px;
+}
