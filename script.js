@@ -5,24 +5,30 @@ const audio = document.getElementById('audio');
 const description = document.getElementById('description');
 const synonyms = document.getElementById('synonyms');
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const word = input.value.trim();
-    if (!word) return ;
 
-    try {
-        const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
-        if (!response.ok) throw new Error('Word not found');
-        const data = await response.json();
-        displayResult(data[0]);
-    } catch (error) {
-        result.innerHTML = `<p>${error.message}</p>`;
-    }
-});
+function searchWord(e) {
+    e.preventDefault();
+
+    let word = input.value;
+}
+
+function fetchWord(word) {
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
+        .then(response => {
+            if (!response.ok) throw new Error('Word not found');
+            return response.json();
+        })
+        .then(data => displayResult(data[0]))
+        .catch(error => error(error.message));
+}
+
+form.addEventListener('submit', searchWord);
 
 // display results
 function displayResult(data) {
+    result.innerHTML = '';
     result.textContent = data.word;
+    let html = '';
 
     const audio = data.phonetics.find(p => p.audio);
     if (audioData) {
@@ -73,6 +79,15 @@ data.meanings.forEach(meaning => {
     }
 });
 
+const searchButton = document.getElementById('button');
+searchButton.addEventListener('click', searchWord);
+searchButton.addEventListener('click', () => {
+    result.push(data.word);
+    description.push(data.meanings[0].definitions[0].definition);
+    synonyms.push(data.meanings[0].synonyms.join(', '));
+
+});
+
 // errror handling
 function error(message) {
     document.getElementById('result').innerHTML = `<p>${message}</p>`;
@@ -87,8 +102,9 @@ form.addEventListener('submit', async (e) => {
         return;
     }
 
-    fetchWord(word);
 });
+displayResult(data);
+fetchWorld(word);
 
 
 
