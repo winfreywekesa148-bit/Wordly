@@ -19,3 +19,17 @@ form.addEventListener('submit', async (e) => {
         result.innerHTML = `<p>${error.message}</p>`;
     }
 });
+
+// display results
+function displayResult(data) {
+    result.textContent = data.word;
+
+    const audio = data.phonetics.find(p => p.audio);
+    if (audioData) {
+        audio.src = audioData.audio;
+        audio.style.display = 'block';
+    } else {
+        audio.style.display = 'none';
+    }
+}
+
