@@ -33,14 +33,13 @@ function displayResult(data) {
     result.innerHTML = '';
     result.textContent = data.word;
 
-    const audio = data.phonetics.find(p => p.audio);
+   const audioData = data.phonetics.find(p => p.audio);
     if (audioData) {
         audio.src = audioData.audio;
         audio.style.display = 'block';
     } else {
         audio.style.display = 'none';
     }
-
 
 // description
 description.innerHTML = `<p id="description"></p>`;
