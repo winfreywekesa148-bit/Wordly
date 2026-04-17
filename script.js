@@ -33,3 +33,24 @@ function displayResult(data) {
     }
 }
 
+// description
+description.innerHTML = `<p id="description"></p>`;
+data.meanings.forEach(meaning => {   
+     meaning.definitions.forEach(def => {
+        const p = document.createElement('p');
+        p.textContent = def.definition;
+        description.appendChild(p);
+    });
+});
+
+// synonyms
+synonyms.innerHTML = `<p id="synonyms"></p>`;
+data.meanings.forEach(meaning => {
+    if (meaning.synonyms.length > 0) {
+        synonyms.innerHTML += `<p><strong>Synonyms:</strong> ${meaning.synonyms.join(', ')}</p>`;
+    } else {
+        synonyms.innerHTML += `<p><strong>Synonyms:</strong> None</p>`;
+    }
+});
+
+
