@@ -5,25 +5,19 @@ const audio = document.getElementById('audio');
 const description = document.getElementById('description');
 const synonyms = document.getElementById('synonyms');
 
+form.addEventListener('submit', searchWord);
 
 function searchWord(e) {
     e.preventDefault();
+    let word = input.value.trim();
 
-    let word = input.value;
+    if (word) {
+        fetchWord(word);
+    } else {
+        error("Please enter a word");
+    }
+    fetchWord(word);
 }
-
-function fetchWord(word) {
-    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
-        .then(response => {
-            if (!response.ok) throw new Error('Word not found');
-            return response.json();
-        })
-        .then(data => displayResult(data[0]))
-        .catch(error => error(error.message));
-}
-
-form.addEventListener('submit', searchWord);
-
 // display results
 function displayResult(data) {
     result.innerHTML = '';
