@@ -102,14 +102,12 @@ button:hover{
 
 #results{
     background: var(--primary-light);
-    border: solid 2px var(--border);
     border-radius: 10px;
     padding: 20px;
 }
 
 #description {
     background: var(--primary-light);
-    border: solid 2px var(--border);
     border-radius: 10px;
     padding: 20px;
 }
