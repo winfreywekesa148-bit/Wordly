@@ -16,7 +16,6 @@ function searchWord(e) {
     } else {
         error("Please enter a word");
     }
-    fetchWord(word);
 }
 
 function fetchWord(word) {
@@ -54,28 +53,20 @@ data.meanings.forEach(meaning => {
 // synonyms
 synonyms.innerHTML = `<p id="synonyms"></p>`;
 const allSynonyms = data.meanings.flatMap(m => m.synonyms);
-    if (meaning.synonyms.length > 0) {
-        synonyms.innerHTML += `<p><strong>Synonyms:</strong> ${meaning.synonyms.join(', ')}</p>`;
-    } else {
-        synonyms.innerHTML += `<p><strong>Synonyms:</strong> None</p>`;
+   if (allSynonyms.length > 0) {
+    synonyms.innerHTML += `<p><strong>Synonyms:</strong> ${allSynonyms.join(', ')}</p>`;
+} else {
+    synonyms.innerHTML += `<p><strong>Synonyms:</strong> None</p>`;
     }
 };
 
 const searchButton = document.getElementById('button');
 searchButton.addEventListener('click', searchWord);
-    description.push(data.meanings[0].definitions[0].definition);
-    synonyms.push(data.meanings[0].synonyms.join(', '));
-
+    
 // errror handling
 function error(message) {
-    result.innerHTML = '<p>${message}</p>';
+    result.innerHTML = `<p>${message}</p>`;
     description.innerHTML = "";
     synonyms.innerHTML = "";
     audio.style.display = 'none';
 }
-
-displayResult();
-fetchWorld(word);
-
-
-
