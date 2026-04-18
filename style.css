@@ -160,3 +160,30 @@ button:hover{
     font-weight: 500;
 }
 
+#synonyms{
+    display: inline-block;
+    margin: 3px;
+    padding: auto;
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: 500;
+}
+ p{
+    color: var(--primary-darker);
+    font-size: larger;
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+ }
+
+ span{
+    color: var(--primary-darker);
+    font-size: larger;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 3px;
+    font-size: larger;
+    font-weight: 500;
+ }
+
