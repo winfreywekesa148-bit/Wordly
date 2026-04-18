@@ -79,3 +79,25 @@ input{
 
 }
 
+#results{
+    display: inline-block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+    justify-content: center;
+    height: 30%;
+}
+
+#description{
+    display: inline-block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+    height: 30%;
+}
+
+
