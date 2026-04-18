@@ -187,3 +187,42 @@ button:hover{
     font-weight: 500;
  }
 
+#source{
+    display: inline-block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    color: var(--primary-darker);
+    font-size: larger;
+    font-weight: 500;
+
+ }
+
+ #phonetic{
+    display: inline-block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    color: var(--primary-darker);
+    font-size: larger;
+    font-weight: 600;
+    
+ }
+
+ #word{
+    display: inline-block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    color: var(--primary-darker);
+    font-size: larger;
+    font-weight: 600;
+    
+ }
+
