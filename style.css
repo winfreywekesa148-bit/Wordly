@@ -226,3 +226,25 @@ button:hover{
     
  }
 
+.source{
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-dark);
+    text-decoration-thickness: 3px; 
+
+ }
+
+ .description{
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-dark);
+    text-decoration-thickness: 3px;
+ }
+
+ .synonyms{
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-dark);
+    text-decoration-thickness: 3px;
+ }
+
