@@ -100,4 +100,34 @@ input{
     height: 30%;
 }
 
+#synonyms{
+    display: inline-block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+button{
+    padding: 3px;
+    border: solid 2px var(--border);
+    border-radius: 10px;
+    width: 20%;
+    font-size: 16px;
+    background: var(--primary-lighter);
+    cursor: pointer;
+}
+
+button:hover{
+    background: var(--primary-light);
+}
+
+#toast{
+    color: var(--primary-dark);
+    visibility: hidden;
+    text-align: center;
+    position: sticky;
+   
+}
 
