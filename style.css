@@ -131,3 +131,32 @@ button:hover{
    
 }
 
+#toast.show{
+    visibility: visible;
+    opacity: 1;
+    bottom: 50%;
+}
+
+#res{
+    font-size: larger;
+    font-weight: 900;
+    height: 20%;
+    margin: 0cm;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-dark);
+    text-decoration-thickness: 3px;
+}
+
+#results{
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#description {
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 0cm;
+    font-size: larger;
+    font-weight: 500;
+}
+
